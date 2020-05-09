@@ -2,6 +2,7 @@
 
 connpassサイト: <https://linedevelopercommunity.connpass.com/event/173295/>
 <br/>
+<br/>
 このドキュメントはLINEとkintoneを利用してアンケートアプリを開発するハンズオンのkintone側の資料になります。
 
 ## 手順
