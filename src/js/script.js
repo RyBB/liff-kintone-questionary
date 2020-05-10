@@ -1,16 +1,18 @@
 (() => {
   'use strict';
 
-  const HEROKU_URL = 'https://liff-kintone-questionary.herokuapp.com/api/sendMulticastMessage'
-  const AUTH = 'API_KEY_000000000';
+  const postLINEMessage = (herokuId, userIds, content) => {
+    const checkHerokuId = herokuId.split('-');
+    const newHerokuId = checkHerokuId[0] === 'ldc' && checkHerokuId[1] === '20200511' ? checkHerokuId[2] : herokuId;
+    const HEROKU_URL = `https://ldc-20200511-${newHerokuId}.herokuapp.com/api/sendMulticastMessage`;
+    const AUTH = 'API_KEY_000000000';
 
-  const postLINEMessage = (userId, content) => {
     const header = {
       'Authorization': AUTH,
       'Content-Type': 'application/json'
     };
     const body = {
-      userIds: [userId],
+      userIds: userIds,
       message: {
         title: 'kintoneからメッセージです',
         body: content || '本文なし'
@@ -35,8 +37,17 @@
 
     btn.onclick = () => {
       const data = isMobile ? kintone.mobile.app.record.get() : kintone.app.record.get();
+      const herokuId = data.record.herokuId.value;
       const userId = data.record.userId.value;
       const content = data.record.content.value;
+      if (!herokuId) {
+        return swal({
+          title: 'エラー',
+          text: 'herokuのIDが書かれていません。',
+          icon: 'warning',
+          dangerMode: true,
+        });
+      }
       swal({
         title: '確認',
         text: 'メッセージを送信して良いですか？',
@@ -44,7 +55,7 @@
         buttons: true,
       }).then(isSend => {
         if (!isSend) throw new Error('キャンセル');
-        if (content) return postLINEMessage(userId, content);
+        if (content) return postLINEMessage(herokuId, [userId], content);
 
         return swal({
           title: '確認',
@@ -57,10 +68,14 @@
         if (!resp) throw new Error('キャンセル');
         if (resp[1] === 200) return resp;
 
-        return postLINEMessage(userId, content);
+        return postLINEMessage(herokuId, [userId], content);
       }).then(res => {
         console.log(res);
-        swal('送信成功！');
+        if (res[1] === 200) {
+          swal('送信成功！');
+        } else {
+          swal('送信失敗');
+        }
       }).catch(err => {
         console.log(err);
       });

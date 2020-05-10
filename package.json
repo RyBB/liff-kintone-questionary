@@ -1,0 +1,32 @@
+{
+  "name": "liff-kintone-questionary",
+  "version": "1.0.0",
+  "description": "このドキュメントはLINEとkintoneを利用してアンケートアプリを開発するハンズオンのkintone側の資料になります。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyBB/liff-kintone-questionary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyBB/liff-kintone-questionary/issues"
+  },
+  "homepage": "https://github.com/RyBB/liff-kintone-questionary#readme",
+  "dependencies": {
+    "vuepress": "^1.4.1"
+  },
+  "devDependencies": {
+    "vuepress-theme-yubisaki": "^3.1.0"
+  }
+}
