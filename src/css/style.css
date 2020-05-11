@@ -1,3 +1,14 @@
+#kintone-send-line-message-input {
+  margin: 0 0 0 20px;
+  float: left;
+}
+
 #kintone-send-line-message-textarea {
-  margin: 0 30px;
+  margin: 0 20px 20px 20px;
+  float: left;
+}
+
+
+#kintone-send-line-message-button {
+  margin: 0 0 50px 0;
 }
