@@ -35,6 +35,20 @@ kintoneではデータ1つ1つに対して **コメント** が残せます。<b
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vQt2nb5bNFNXaP9vWY0VtOeEHbUlQggkOewljrzUOwr3o9b9KTiuJ7I_WAWCKfL9we9XQUOBo20aZ0R/pub?w=821&amp;h=495">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vR9TeqaUCY8XEc13mFwSOQ_vHd1OwTjQR9OPW3FGJyKgtz-vUf9Q3iZO8x7MtjcoBmV8xm08b5cAhoy/pub?w=914&amp;h=611">
 <br/>
+
+### サンプルデータ
+
+グラフを作るためにはあらかじめいくつかデータがないと見栄えが良くないので、<br/>
+こちらでサンプルデータのCSVを用意しました。
+
+<font color="red">**サンプルデータにはLINE User IDが含まれていないので、動作チェック②を終えた後にやるといいかもです！**</font>
+
+[こちら](https://github.com/RyBB/liff-kintone-questionary/releases)から **sampleData.csv** をダウンロードして、kintoneへインポートしてください。
+
+一覧画面の右側にある「…」より **ファイルから読み込む** を選択します。
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQpciYjPgGcs6abovgZGjUZBKN3fTGiKA47LMfia5V3KHekaUbOLx59N2D06U33lLltNueFyOxgtc6s/pub?w=926&amp;h=621">
+ダウンロードしたCSVを読み込んで、上部にある「読み込む」を選択すればデータが読み込まれます。
+<br/>
 <br/>
 以上でkintoneの標準機能の動作チェックは完了です!<br/>
 グラフ作成の他に **一覧に表示するデータの絞り込み** も可能です。<br/>
