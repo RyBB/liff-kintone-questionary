@@ -36,7 +36,7 @@ kintoneではデータ1つ1つに対して **コメント** が残せます。<b
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vR9TeqaUCY8XEc13mFwSOQ_vHd1OwTjQR9OPW3FGJyKgtz-vUf9Q3iZO8x7MtjcoBmV8xm08b5cAhoy/pub?w=914&amp;h=611">
 <br/>
 
-### サンプルデータ
+## サンプルデータ
 
 グラフを作るためにはあらかじめいくつかデータがないと見栄えが良くないので、<br/>
 こちらでサンプルデータのCSVを用意しました。
